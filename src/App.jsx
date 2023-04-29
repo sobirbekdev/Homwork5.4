@@ -5,7 +5,6 @@ import React from 'react';
 import { SideFanc } from './Components/Side/Side';
 import { Header } from './Components/Header/Header';
 import { Main } from './Components/Main/Main';
-import ModalFanc from './Components/Side/Modal';
 
 
 
@@ -27,7 +26,6 @@ function App() {
           </div>
           <Header />
           <Main />
-          <ModalFanc />
 
 
         </div>
