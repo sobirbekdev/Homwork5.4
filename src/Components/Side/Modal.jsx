@@ -10,8 +10,8 @@ const ModalFanc = ({ open, onClose }) => {
     if (!open) return null
     return (
         <>
-            <div className="relative   ">
-                <div className=" absolute end-0 w-[350px]  bg-slate-700 px-3 pb-3  sm:block md:hidden ">
+            <div className="relative  ">
+                <div className=" absolute end-0 w-[350px]   bg-slate-700 px-3 pb-3  sm:block md:hidden ">
                     <span className="flex justify-end">
                         <h3 onClick={onClose} className="text-white font-bold py-2 ">X</h3>
                     </span>

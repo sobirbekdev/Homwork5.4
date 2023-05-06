@@ -6,7 +6,7 @@ import Img3 from "../Side/Imgs/Oval (2).svg"
 export function Roadmap() {
     return (
         <>
-            <ul className="w-full rounded-[10px] bg-white p-8 mt-4  sm:hidden md:block md:w-full md:h-[250px] ">
+            <ul className="roadmab__box w-full rounded-[10px] bg-white p-8 mt-4  sm:hidden md:block md:w-full md:h-[250px] ">
                 <li className="flex justify-between ">
                     <h5 className="text-[18px] font-bold text-[#3A4374]">Roadmap</h5>
                     <Btn className='btnSide'>View</Btn>

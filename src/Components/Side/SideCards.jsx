@@ -3,7 +3,7 @@ import { Btn } from "../Button/Button";
 export function SideCards() {
     return (
         <>
-            <ul className="mt-3 bg-white rounded-[10px] p-6 sm:hidden md:block  md:h-[250px] ">
+            <ul className="list__side mt-3 bg-white rounded-[10px] p-6 sm:hidden md:block  md:h-[250px]  ">
                 <li className="flex gap-2 p-2">
                     <Btn>All</Btn>
                     <Btn>Ul</Btn>

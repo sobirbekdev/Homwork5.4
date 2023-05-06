@@ -7,10 +7,10 @@ export function Comments3(){
         <>
         <ul className="bg-white flex justify-between p-8 gap-4 items-center rounded-[10px]">
                     <li className="flex gap-5  items-center">
-                        <Btn>
-                            <img className="m-2" width={15} src={PathIMg} alt="PathIMg" />
-                            65
-                        </Btn>
+                            <Btn>
+                                <img className="m-2" width={15} src={PathIMg} alt="PathIMg" />
+                                65
+                            </Btn>
                         <span>
                             <h3 className="text-[18px] text-[#3A4374;] ">
                             Q&A within the challenge hubs

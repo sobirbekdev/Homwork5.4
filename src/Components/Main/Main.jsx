@@ -1,21 +1,26 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Comments1 } from "./Comments1";
-import { Comments2 } from "./Comments2";
-import { Comments3 } from "./Comments3";
-import { Comments4 } from "./Comments4";
-import { Comments5 } from "./Comments5";
-import { Comments6 } from "./Comments6";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Profil } from "../Profil";
 
 export function Main() {
+
+    let [userData, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get("https://reqres.in/api/users").then(json => setData(json.data.data));
+    }, []);
     return (
         <>
-            <div className="mt-4   ">
-                <Comments1/>
-                <Comments2/>
-                <Comments3/>
-                <Comments4/>
-                <Comments5/>
-                <Comments6/>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route className="mt-4">
+                        <Route path="/" element={<Comments1 userData={userData} />} />
+                        <Route path="/user/:userId" element={<Profil userData={userData} />}/>
+                    </Route>
+                </Routes>
+            </BrowserRouter>
         </>
     )
 }

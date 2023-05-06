@@ -7,8 +7,8 @@ export function Mentor() {
     const [openModal, setOpenModal] = useState(false)
     return (
         <>
-            <ul className=" mentr__box flex justify-between py-16 rounded-[10px] sm:w-full sm:py-8  sm:h-[100px] 
-            md:w-full md:py-16 px-8 md:h-[250px] ">
+            <ul className=" mentr__box  flex justify-between py-16 rounded-[10px] sm:w-full sm:py-8  sm:h-[100px] 
+            md:w-full md:py-16 px-8 md:h-[250px] max-[320px]:bg-[red] bg-[red]">
                 <li>
                     <h3 className="text-xl text-white">
                         Frontend Mentor

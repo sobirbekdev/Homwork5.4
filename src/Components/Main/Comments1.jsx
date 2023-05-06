@@ -1,22 +1,21 @@
 import { Btn } from "../Button/Button";
 import MassegIMg from "../Main/Imgs/Path.svg";
-import PathIMg from "../Main/Imgs/Path 2.svg";
 
-export function Comments1(){
-    return(
+import { Link } from "react-router-dom";
+
+export function Comments1({ userData }) {
+    return (
         <>
-        <ul className="bg-white flex justify-between gap-4 p-8 items-center rounded-[10px]">
-                    <li className="flex gap-5  items-center">
-                        <Btn>
-                            <img className="m-2" width={15} src={PathIMg} alt="PathIMg" />
-                            112
-                        </Btn>
+            {userData.map((user, index) => (
+                <ul className="bg-white flex justify-between gap-4 p-4 items-center rounded-[10px]">
+                    <li className="flex gap-5  items-center" key={index}>
+                        <Btn className="text-black text-start px-3 py-1 mx-2 border rounded-[50%] w-1">
+                            {user.id}</Btn>
                         <span>
-                            <h3 className="text-[18px] text-[#3A4374;] ">
-                                Add tags for solutions
-                            </h3>
-                            <p className="text-[#647196;] ">
-                                Easier to search for solutions based on a specific stack.
+                            <Link className="text-center fw-bold fs-5 " to={`/user/${user.id}`}>
+                                {user.first_name}</Link>
+                            <p className="text-[#647196;] fs-6 mt-2">
+                                {user.last_name}
                             </p>
                             <Btn className="text-[#4661E6;] ">Enhancement</Btn>
                         </span>
@@ -26,6 +25,9 @@ export function Comments1(){
                         <p className="mt-2 font-bold">5</p>
                     </li>
                 </ul>
+            ))}
+
+
         </>
     )
 }
