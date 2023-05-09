@@ -1,8 +1,3 @@
-import { SideFanc } from './Components/Side/Side';
-import { Header } from './Components/Header/Header';
-import { Main } from './Components/Main/Main';
-import { Coment } from './Components/Cpment';
-
 
 
 // const Data = [
@@ -48,26 +43,29 @@ import { Coment } from './Components/Cpment';
 //   },
 // ]
 
+import { Route, Routes } from "react-router-dom";
+import { Feedbock } from "./Components/Feedback";
+import { Asosiy } from "./Components/Asosiy";
+import { Page } from "./Components/Pags/Page";
+import { EditFeedbec } from "./Components/Edit-feedbect";
+
 
 
 
 function App() {
 
+
   return (
-    < >
-      <div className=' bg-slate-100 flex gap-4  px-24 lg:px-16 md:px-14'>
-        <div className='modal__box sm:hidden md:hidden lg:block '>
-          <SideFanc />
-        </div>
-        <div className='w-full'>
-          <div className='sm:flex lg:hidden '>
-            <SideFanc />
-          </div>
-          <Header />
-          <Main />
-        
-        </div>
-      </div>
+    <>
+
+        <Routes>
+          <Route path="/" element={<Feedbock />} />
+          <Route path="/Feedbock" element={<Feedbock />} />
+          <Route path="/Edit-feedbect" element={<EditFeedbec />} />
+          <Route path="/asosiy" element={ <Asosiy/>} />
+          <Route path="/Page" element={ <Page/>} />
+        </Routes>
+
     </>
   );
 }

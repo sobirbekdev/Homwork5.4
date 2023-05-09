@@ -13,14 +13,8 @@ export function Main() {
     }, []);
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route className="mt-4">
-                        <Route path="/" element={<Comments1 userData={userData} />} />
-                        <Route path="/user/:userId" element={<Profil userData={userData} />}/>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+                    <Comments1 userData={userData} />
+                    
         </>
     )
 }

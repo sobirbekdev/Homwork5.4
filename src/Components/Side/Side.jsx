@@ -10,7 +10,6 @@ export function SideFanc() {
         <Mentor />
         <SideCards/>
         <Roadmap />
-        
         </div>
     )
 

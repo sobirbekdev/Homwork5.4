@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { Btn } from "../Button/Button";
 import Img1 from "../Side/Imgs/Oval.svg"
@@ -7,6 +8,7 @@ import Img3 from "../Side/Imgs/Oval (2).svg"
 
 
 const ModalFanc = ({ open, onClose }) => {
+    let {t} = useTranslation();
     if (!open) return null
     return (
         <>
@@ -18,16 +20,16 @@ const ModalFanc = ({ open, onClose }) => {
                     <ul className="mt-3 bg-white rounded-[10px] justify-end ">
 
                         <li className="flex gap-2 p-2">
-                            <Btn>All</Btn>
-                            <Btn>Ul</Btn>
-                            <Btn>UX</Btn>
+                            <Btn>{t("modal_Btn1")}</Btn>
+                            <Btn> {t("modal_Btn2")}</Btn>
+                            <Btn>{t("modal_Btn3")}</Btn>
                         </li>
                         <li className="flex gap-2  p-2">
-                            <Btn>Enhancement</Btn>
-                            <Btn>Bug</Btn>
+                            <Btn>{t("modal_Btn4")}</Btn>
+                            <Btn>{t("modal_Btn5")}</Btn>
                         </li>
                         <li className="flex p-2">
-                            <Btn>Feature</Btn>
+                            <Btn>{t("modal_Btn6")}</Btn>
                         </li>
                     </ul>
                     <ul className="w-full rounded-[10px] bg-white p-8 mt-4  ">

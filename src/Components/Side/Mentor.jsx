@@ -2,8 +2,10 @@ import "./Side.Modul.css";
 import SideModalImg from "./Imgs/Group 3.svg"
 import ModalFanc from "./Modal";
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 export function Mentor() {
+    let {t} = useTranslation();
     const [openModal, setOpenModal] = useState(false)
     return (
         <>
@@ -11,10 +13,10 @@ export function Mentor() {
             md:w-full md:py-16 px-8 md:h-[250px] max-[320px]:bg-[red] bg-[red]">
                 <li>
                     <h3 className="text-xl text-white">
-                        Frontend Mentor
+                        {t("Card_sde")}
                     </h3>
                     <p className="text-sm text-white opacity-75">
-                        Feedback Board
+                        {t("Card_title")}
                     </p>
                 </li>
 
